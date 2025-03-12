@@ -7,13 +7,12 @@
     "express": "4.17.1"
   },
   "devDependencies": {
-    "mocha": "9.1.1",
-    "supertest": "6.1.6",
-    "nyc": "15.1.0"  // Add nyc for code coverage
+    "mocha": "9.1.1",          // Testing framework
+    "supertest": "6.1.6",      // API testing tool
+    "nyc": "15.1.0"            // Code coverage tool
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "nyc --reporter=lcov --reporter=text mocha ./test/test.js"  // Run tests with coverage
+    "start": "node index.js",  // Start the application (typically used in local/production environments)
+    "test": "nyc --reporter=lcov --reporter=text mocha ./test/test.js"  // Run tests and generate coverage report with nyc
   }
 }
-
