@@ -8,10 +8,12 @@
   },
   "devDependencies": {
     "mocha": "9.1.1",
-    "supertest": "6.1.6"
+    "supertest": "6.1.6",
+    "nyc": "15.1.0"  // Add nyc for code coverage
   },
   "scripts": {
     "start": "node index.js",
-    "test": "./node_modules/.bin/mocha ./test/test.js"
+    "test": "nyc --reporter=lcov --reporter=text mocha ./test/test.js"  // Run tests with coverage
   }
 }
+
